@@ -1,11 +1,12 @@
 function search(value)
 {
+	if(typeof value == "undefined" || value == "")
+		return false;
 	var text = document.getElementById("search_text").textContent;
 	//search gloably and without sense to case
 	var searchReg = new RegExp(value, "gi");
 	var citeReg = new RegExp('(\\[.*?\\])');
 	text = text.replace(citeReg, '');
-	console.log(text);
 	var count = 0;
 	while ((match = searchReg.exec(text)) != null ) {
 		count++;
@@ -20,5 +21,12 @@ window.onload=function() {
 		search(document.getElementById("search_input").value);
 		//prevents that nasty jumping effect
 		return false;
+	}
+
+	document.getElementById("search_input").onkeyup = function(e) {
+		console.log(document.getElementById("search_input").value);
+		search(document.getElementById("search_input").value);
+		//prevents that nasty jumping effect
+		return true;
 	}
 }
