@@ -4,8 +4,10 @@ function getLinks(){
 	{
 		links[i].onclick = function(e) {
 			e = e || event
+			//get the tag name and convert it to tab# format
 			var tbtg = e.target.innerHTML.replace(/\s+/g, '').toLowerCase();;
 			switchTabs(tbtg);
+			//prevents the nasty jump.
 			return false;
 		}
 	}
@@ -17,6 +19,7 @@ function switchTabs(tabToGo) {
 	var lists = document.getElementsByTagName('li');
 	for(var i = 0; i < tabs.length;i++)
 	{
+		//the animation magic
 		tabs[i].setAttribute("class", "hidden");
 		lists[i].setAttribute("class", "");
 		if (tabs[i].id == tabToGo)
@@ -29,5 +32,6 @@ function switchTabs(tabToGo) {
 }
 window.onload=function() {
 	getLinks();
-	switchTabs(window.location.hash.split('#')[1]);
+	if(window.location.hash.split('#')[1])
+		switchTabs(window.location.hash.split('#')[1]);
 }

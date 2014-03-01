@@ -37,7 +37,7 @@ function switchImage(index) {
 	}
 	var newImage = new Image()
 	newImage.src = images[index];
-	insertAfter(curImage, newImage);
+	curImage.parentNode.insertBefore(newImage, curImage);
 	curImage.id = "oldImage";
 	newImage.id = "rotateImg";
 	//transition magic
@@ -75,11 +75,14 @@ rotator.onmouseover = rotator.onmouseout = function(e) {
 	if(checkMouse(e, this)) {
 		if (e.type == "mouseover")
 		{
+			//clear the interval switcher
 			clearInterval(autoSwitch)
 			document.getElementById("rotateTextbox").setAttribute('class', 'show');
 		}
 		else if (e.type == "mouseout")
 		{
+			//javascript can sometimes get confused with fast mouse movements
+			//hinder it's plans by clearing any existing switchers too.
 			clearInterval(autoSwitch)
 			autoSwitch = setInterval(rotate, 3000);
 			document.getElementById("rotateTextbox").setAttribute('class', '');
@@ -89,8 +92,4 @@ rotator.onmouseover = rotator.onmouseout = function(e) {
 
 window.onload=function() {
 	autoSwitch = setInterval(rotate, 3000);
-}
-
-function insertAfter(before, newb) {
-    before.parentNode.insertBefore(newb, before);
 }

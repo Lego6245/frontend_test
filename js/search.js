@@ -2,10 +2,8 @@ function search(value)
 {
 	var text = document.getElementById("search_text").textContent;
 	var searchReg = new RegExp(value, "gi");
-	console.log(searchReg);
 	var count = 0;
 	while ((match = searchReg.exec(text)) != null ) {
-		console.log(match);
 		count++;
 	}
 	document.getElementById("resNumber").innerHTML = count;
