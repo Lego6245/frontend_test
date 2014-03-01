@@ -1,0 +1,74 @@
+#container {
+	position: relative;
+	background-color: rgb(55,55,55);
+	height: 150px;
+	border-style: solid;
+	border-width: 2px;
+}
+
+#container * {
+	padding: 5px;
+}
+
+#navigation {
+	list-style: none;
+	position: inline;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+}
+
+#navigation li {
+	color: inherit;
+	float: left;
+	position: relative;
+	font-size: 20px;
+	padding: 5px;
+	border-style: solid;
+	border-width: 2px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background-color: rgb(33,33,33);
+	z-index: 1;
+	height: 18px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+
+}
+
+#navigation li.select {
+	background-color: rgb(55,55,55);
+	z-index: 1;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+}
+
+.show {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 1;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+}
+
+.hidden {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+}

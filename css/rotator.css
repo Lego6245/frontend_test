@@ -1,9 +1,9 @@
 #rotateTextbox {
 	-webkit-transition: .5s;
-  	-moz-transition: .5s;
-  	-ms-transition: .5s;
-  	-o-transition: .5s;
-  	transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -15,14 +15,14 @@
 }
 
 #rotateTextbox.show {
-  -webkit-transition: .5s;
-  -moz-transition: .5s;
-  -ms-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
-  opacity: 1;
-  background: rgba(22,22,22,.9);
-  z-index: 1;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+	opacity: 1;
+	background: rgba(22,22,22,.9);
+	z-index: 1;
 }
 
 #rotator {
@@ -41,22 +41,22 @@
 }
 
 .imagehide {
-  -webkit-transition: .5s;
-  -moz-transition: .5s;
-  -ms-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
-  opacity: 0;
-   z-index: 0;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+	opacity: 0;
+	 z-index: 0;
 }
 
 .imageshow {
-  -webkit-transition: .5s;
-  -moz-transition: .5s;
-  -ms-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
-  opacity: 1;
-  z-index: 0;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+	opacity: 1;
+	z-index: 0;
 }
 
