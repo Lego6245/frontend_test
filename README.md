@@ -5,3 +5,7 @@ Contained within are secrets from another world! Just kidding, they're just my c
 ## Getting Started
 
 Start at index.html! I've commented on each exersize on it's own .html file, so be sure to read to get insight into my implementation and what my next steps might be.
+
+##Notes
+
+This was done using Chrome for OS X. In a real life scenario, I would have cross tested against all browsers possible.
